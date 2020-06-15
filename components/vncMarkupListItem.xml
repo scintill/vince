@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) 2020 Joey Hewitt <joey@joeyhewitt.com>
+
+This file is part of Vince.
+
+Vince is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Vince is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Vince.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<component name="vncMarkupListItem" extends="Group">
+	<script type="text/brightscript" uri="vncMarkupListItem.brs" />
+
+	<interface>
+		<field id="height" type="float" onChange="setHeight" />
+		<field id="focusPercent" type="float" onChange="setFocusPercent" />
+		<field id="itemContent" type="node" onChange="setItemContent" />
+	</interface>
+
+	<children>
+		<Label vertAlign="center" visible="false">
+			<Font role="font" uri="pkg:/fonts/fa-regular-400.ttf" />
+		</Label>
+		<Label vertAlign="center" visible="false">
+			<Font role="font" uri="pkg:/fonts/fa-solid-900.ttf" />
+		</Label>
+		<Label vertAlign="center" font="font:MediumBoldSystemFont" />
+	</children>
+</component>

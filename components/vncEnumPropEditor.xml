@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) 2020 Joey Hewitt <joey@joeyhewitt.com>
+
+This file is part of Vince.
+
+Vince is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Vince is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Vince.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<component name="vncEnumPropEditor" extends="ListPanel" initialFocus="labelList">
+	<script type="text/brightscript" uri="vncEnumPropEditor.brs" />
+
+	<interface>
+		<field id="title" type="string" />
+		<field id="key" type="string" />
+		<field id="value" type="string" onChange="onSetValue" />
+	</interface>
+
+	<children>
+		<LabelList id="labelList">
+			<ContentNode role="content">
+				<ContentNode />
+			</ContentNode>
+		</LabelList>
+	</children>
+</component>

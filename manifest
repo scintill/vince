@@ -1,0 +1,10 @@
+title=Vince
+major_version=0
+minor_version=1
+build_version=0
+
+mm_icon_focus_hd=pkg:/images/icon.png
+
+ui_resolutions=hd
+
+bs_const=debug=true

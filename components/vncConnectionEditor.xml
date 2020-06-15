@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright (c) 2020 Joey Hewitt <joey@joeyhewitt.com>
+
+This file is part of Vince.
+
+Vince is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Vince is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Vince.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<component name="vncConnectionEditor" extends="ListPanel" initialFocus="propList">
+	<script type="text/brightscript" uri="vncConnectionEditor.brs" />
+
+	<interface>
+		<field id="connection" type="assocarray" onChange="onSetConnection" />
+		<field id="connectionList" type="node" />
+		<function name="onPlayButton" />
+	</interface>
+
+	<children>
+		<MarkupList id="propList" itemComponentName="vncMarkupListItem">
+			<ContentNode role="content">
+				<!-- abuse the description attribute to hold a keyname. maybe keep it readable in case it's used by screenreader??? -->
+				<ContentNode title="Connect" description="_connect" />
+				<ContentNode title="Hostname/IP" description="hostname" />
+				<ContentNode title="Port" description="port" />
+				<ContentNode title="Color Depth" description="bpp" />
+				<ContentNode title="Password (optional)" description="passwd" /><!-- TODO nicer formatting of "optional" -->
+				<ContentNode title="Save" description="_save" />
+				<ContentNode title="Delete" description="_delete" />
+			</ContentNode>
+		</MarkupList>
+	</children>
+</component>

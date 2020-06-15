@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 576 512"
+   version="1.1"
+   id="svg3725"
+   sodipodi:docname="icon.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="C:\Users\scintill\Downloads\icon.png"
+   inkscape:export-xdpi="40.833332"
+   inkscape:export-ydpi="40.833332">
+  <metadata
+     id="metadata3731">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3729" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2736"
+     inkscape:window-height="1668"
+     id="namedview3727"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="568.27473"
+     inkscape:cy="192.94611"
+     inkscape:window-x="-16"
+     inkscape:window-y="-16"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3737"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion3739"><rect
+         id="rect3741"
+         width="3.1243327"
+         height="68.735313"
+         x="76.155609"
+         y="-17.964912" /></flowRegion><flowPara
+       id="flowPara3743"></flowPara></flowRoot>  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3745"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion3747"><rect
+         id="rect3749"
+         width="5.8581238"
+         height="85.919144"
+         x="74.983978"
+         y="92.948891" /></flowRegion><flowPara
+       id="flowPara3751"></flowPara></flowRoot>  <rect
+     style="fill:#000000;fill-opacity:0.22997417;opacity:0.91"
+     id="rect4844"
+     width="489"
+     height="320"
+     x="44"
+     y="48.000004"
+     inkscape:export-xdpi="40.833332"
+     inkscape:export-ydpi="40.833332" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Below" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Above">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:43.45449448px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.08636236"
+       x="87.044937"
+       y="260.21417"
+       id="text3735"
+       transform="scale(0.97065487,1.0302323)"><tspan
+         sodipodi:role="line"
+         id="tspan3733"
+         x="87.044937"
+         y="260.21417"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:202.66667175px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free';stroke-width:1.08636236"><tspan
+           style="fill:#ff0008;fill-opacity:1"
+           id="tspan4558">V</tspan><tspan
+           id="tspan4608"
+           style="fill:#ffa800;fill-opacity:1">i</tspan><tspan
+           style="fill:#d1cc32;fill-opacity:1"
+           id="tspan4634">n</tspan><tspan
+           style="fill:#24b406;fill-opacity:1"
+           id="tspan4722">c</tspan><tspan
+           style="fill:#517aff;fill-opacity:1"
+           id="tspan4762">e</tspan></tspan></text>
+    <path
+       d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z"
+       id="path3723"
+       style="fill:#80659c;fill-opacity:1" />
+  </g>
+</svg>
