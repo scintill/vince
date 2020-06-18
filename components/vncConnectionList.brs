@@ -30,7 +30,7 @@ function init() as void
 		while content.getChildCount() > 1 ' remove all existing connections
 			content.removeChildIndex(0)
 		end while
-		for i = m.connections.count()-1 to 0 step -1 ' TODO how to order these? MRU? currently the child node indices have to match the array indices
+		for i = m.connections.count()-1 to 0 step -1
 			connection = m.connections[i]
 			node = createObject("roSGNode", "ContentNode")
 			node.title = connection.hostname+":"+connection.port
@@ -42,7 +42,6 @@ function init() as void
 end function
 
 function normalizeConnection(connection as object) as object
-	' TODO should we send hostname=invalid ("[unset]") instead?
 	if connection.hostname = invalid connection.hostname = ""
 	if connection.port = invalid connection.port = "5900"
 	if connection.bpp = invalid connection.bpp = "24"

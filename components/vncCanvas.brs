@@ -16,7 +16,7 @@
 ' along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
 function init() as void
-	m.top.rotation = 1e-33 ' gets rid of garbage that shows up when you move your cursor around a lot TODO do we care about non-OpenGL devices?
+	m.top.rotation = 1e-33 ' gets rid of garbage that shows up when you move your cursor around a lot
 
 	m.renderCount = 0
 end function
@@ -40,7 +40,6 @@ function drawBmp(path as string, x as integer, y as integer, width as integer, h
 	' patch the new bmp into the canvas bitmap
 	bmpBa = createObject("roByteArray")
 	for yl = y to y+height-1
-		' TODO optimize? do incremental math and unroll the loop?
 		fbOffset = (yl*m.width + x) * m.Bpp
 		bmpOffset = m.bmpHeaderLength + ((yl-y)*width) * m.Bpp
 		bmpBa.readFile(path, bmpOffset, width * m.Bpp)
@@ -53,9 +52,7 @@ function drawBmp(path as string, x as integer, y as integer, width as integer, h
 
 	' It seems we no longer have a problem with exhausting texture memory and getting flickering images,
 	' but having thousands of nodes is still probably not a good idea.
-	' TODO we get double-painting the cursor when moving it quick on a 8bpp screen that hasn't repainted
 	if m.top.getChildCount() > 1000 then
-		' TODO also repaint every 5 seconds or so, in case there is a corruption we can't detect
 		fbPath = bmp_createFromBytes(m.fb, m.colorFormat, m.width, m.height, "canvas", m.instanceId, m.renderCount)
 		clear()
 		addPoster(fbPath, 0, 0, true)

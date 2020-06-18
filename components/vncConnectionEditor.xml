@@ -34,7 +34,7 @@ along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 				<ContentNode title="Hostname/IP" description="hostname" />
 				<ContentNode title="Port" description="port" />
 				<ContentNode title="Color Depth" description="bpp" />
-				<ContentNode title="Password (optional)" description="passwd" /><!-- TODO nicer formatting of "optional" -->
+				<ContentNode title="Password (optional)" description="passwd" />
 				<ContentNode title="Save" description="_save" />
 				<ContentNode title="Delete" description="_delete" />
 			</ContentNode>

@@ -158,7 +158,7 @@ function vnc_createObject(node as object, instanceId as integer, connSpec as obj
 					return "Server sent an invalid SetColorMapEntries command" ' should not be sent because we didn't ask for it
 				else if msgType = 2 then
 					' Bell
-					print "Bell" ' TODO
+					print "Bell"
 				else if msgType = 3 then
 					' ServerCutText
 					if skt_seekBytes(m._socket, 3) = false goto connlost ' padding
@@ -220,7 +220,6 @@ function vnc_createObject(node as object, instanceId as integer, connSpec as obj
 			end if
 
 			linesLoaded = 0
-			' TODO can we make this faster? a better encoding could help, but it's a tradeoff between slow I/O and slow Brightscript computations
 			while linesLoaded < height
 				linesToFetch = min(100, height - linesLoaded)
 

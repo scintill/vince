@@ -35,11 +35,8 @@ function init() as void
 end function
 
 function setState(state as string) as void
-	' TODO destroy instead of hiding?
 	if state <> "error" m.top.dialog = invalid
 
-	' TODO we are losing state here, such as the panel layout and unsaved edits made to the connection.
-	' restore it when the users backs out of connection
 	m.top.removeChild(m.connPanelSet)
 	m.connPanelSet = invalid
 

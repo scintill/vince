@@ -15,7 +15,6 @@
 ' You should have received a copy of the GNU General Public License
 ' along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
-' TODO Add Connection -> Connect/Delete shouldn't be options
 function init() as void
 	m.propList = m.top.findNode("propList")
 	m.propListPanel = m.top
@@ -40,11 +39,9 @@ function onItemSelected() as void
 		if errors.count() > 0 then
 			m.top.getScene().callFunc("showErrorDialog", errors.join(chr(10)), invalid)
 		else
-			' TODO give feedback on save?
 			m.top.connectionList.callFunc("saveConnection", m.connection)
 		end if
 	else if action = "_delete" then
-		' TODO on delete, close the panel and return to connlist
 		m.top.connectionList.callFunc("deleteConnection", m.connection.id)
 	end if
 end function
@@ -63,7 +60,7 @@ function createPropEditor(cnode as object) as object
 	if cnode.description = "bpp" then
 		propEditor = createObject("roSGNode", "vncEnumPropEditor")
 	else
-		propEditor = createObject("roSGNode", "vncStringPropEditor") ' XXX be more economical? it was buggy when I tried the alternating pattern in docs
+		propEditor = createObject("roSGNode", "vncStringPropEditor")
 		propEditor.valueExists = (connectionValue <> invalid)
 	end if
 	propEditor.title = cnode.title

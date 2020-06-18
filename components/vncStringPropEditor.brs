@@ -15,7 +15,6 @@
 ' You should have received a copy of the GNU General Public License
 ' along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
-' TODO after edit, move focus over to left?
 function init() as void
 	m.top.focusable = true
 	m.top.hasNextPanel = false

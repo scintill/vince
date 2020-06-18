@@ -15,13 +15,6 @@
 ' You should have received a copy of the GNU General Public License
 ' along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
-' TODO disable system screensaver? our usecase could involve someone watching an "idle" Roku for 20 minutes
-	' https://community.roku.com/t5/Roku-Developer-Program/Is-there-a-programmatic-way-to-prevent-Roku-to-go-to-screen/m-p/326075
-' TODO make sure 1080 resolution works
-' TODO any fancier auth types?
-' TODO screensaver mode
-' TODO show docs/tips somewhere, like how to zoom
-' TODO connect should validate conn details like save does
 function main() as void
 	screen = createObject("roSGScreen")
 	msgPort = createObject("roMessagePort")

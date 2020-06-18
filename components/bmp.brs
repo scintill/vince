@@ -35,7 +35,6 @@ function bmp_createFromBytes(imageDataBytes as object, colorFormat as object, wi
 	' The VNC server may choose to send differing values from pixel to pixel, in this byte that is supposed to be ignored. Some of
 	' them cause Roku to not render correctly.
 	' XXX do it in the receive loop instead? would it be faster? unroll this loop? my informal testing suggested this isn't a big deal
-	' TODO do we need to make sure the scanlines are multiples of 4 or whatever?
 	if colorFormat.depth = 24 then
 		for i = 3 to imageDataBytes.count()-1 step 4
 			imageDataBytes[i] = &hff
