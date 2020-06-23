@@ -25,20 +25,20 @@ function init() as void
 
 	m.connections = loadConnections()
 
-	m.renderConnections = function() as void
-		content = m.top.list.content
-		while content.getChildCount() > 1 ' remove all existing connections
-			content.removeChildIndex(0)
-		end while
-		for i = m.connections.count()-1 to 0 step -1
-			connection = m.connections[i]
-			node = createObject("roSGNode", "ContentNode")
-			node.title = connection.hostname+":"+connection.port
-			content.insertChild(node, 0)
-		end for
-	end function
+	renderConnections()
+end function
 
-	m.renderConnections()
+function renderConnections() as void
+	content = m.top.list.content
+	while content.getChildCount() > 1 ' remove all existing connections
+		content.removeChildIndex(0)
+	end while
+	for i = m.connections.count()-1 to 0 step -1
+		connection = m.connections[i]
+		node = createObject("roSGNode", "ContentNode")
+		node.title = connection.hostname+":"+connection.port
+		content.insertChild(node, 0)
+	end for
 end function
 
 function normalizeConnection(connection as object) as object
@@ -98,13 +98,13 @@ end function
 ' component function
 function saveConnection(connection as object) as void
 	saveToRegistry(connection.id, connection.data)
-	m.renderConnections()
+	renderConnections()
 end function
 
 ' component function
 function deleteConnection(id as integer) as void
 	deleteFromRegistry(id)
-	m.renderConnections()
+	renderConnections()
 end function
 
 ' component function
