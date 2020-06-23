@@ -16,7 +16,7 @@
 # along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
 APPNAME = vince
-VERSION = 1.0
+VERSION = 0.1
 
 ZIP_EXCLUDE_LOCAL = /.git/\* .gitignore /dist/\* /proprietary/\* /prebuild/\* /docs/\* /notes.txt
 

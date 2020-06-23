@@ -8,6 +8,14 @@ Vince is a basic view-only VNC client for Roku. It supports storing several conn
 * VNC password authentication
 * One connection can be selected as a screensaver. If the system screensaver is set to the Vince channel, that connection will be opened when the screensaver starts.
 
+## Installing
+
+Navigate to [https://my.roku.com/add/Vince](https://my.roku.com/add/Vince) in your browser, and log in using the Roku account associated with your device(s). Follow the directions, and Vince should appear on your homescreen.
+
+## Usage
+
+The menus are hopefully intuitive. When you have a connection open, press the "OK" button on your remote to toggle zooming the screen. While zoomed, use the arrow buttons to pan around. Press "OK" again to zoom out. Press "back" or "left" to exit the connection.
+
 ## Building
 
 Currently the build relies on a Roku-provided Makefile with no explicit license. See the comment at the bottom of `Makefile` for the URL to that file, download it, and run `make` to build the zip, then [sideload it](https://developer.roku.com/en-ca/docs/developer-program/getting-started/developer-setup.md).
