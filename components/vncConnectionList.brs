@@ -46,6 +46,7 @@ function normalizeConnection(connection as object) as object
 	if connection.port = invalid connection.port = "5900"
 	if connection.bpp = invalid connection.bpp = "24"
 	if connection.passwd = invalid connection.passwd = ""
+	if connection.isScreenSaver = invalid connection.isScreenSaver = false
 	return connection
 end function
 
@@ -62,8 +63,15 @@ function loadConnections() as object
 end function
 
 function saveToRegistry(id as integer, connection as object) as void
-	reg = createObject("roRegistrySection", "connections")
+	' reset all other connections to non-screensaver
+	for i = 0 to m.connections.count()-1
+		if id <> i then
+			m.connections[i].isScreenSaver = false
+		end if
+	end for
+
 	m.connections[id] = connection
+	reg = createObject("roRegistrySection", "connections")
 	reg.write("json", formatJson(m.connections))
 	reg.flush()
 end function
@@ -93,6 +101,22 @@ function createNextPanel() as void
 	end if
 	editor.connectionList = m.top
 	m.top.nextPanel = editor
+end function
+
+function onIsScreenSaverChange() as void
+	if m.top.isScreenSaver then
+		for each connection in m.connections
+			if connection.isScreenSaver then
+				connectTo(connection)
+				return
+			end if
+		end for
+		' fallback to first
+		if m.connections[0] <> invalid then
+			connectTo(m.connections[0])
+			return
+		end if
+	end if
 end function
 
 ' component function

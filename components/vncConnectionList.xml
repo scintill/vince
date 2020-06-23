@@ -24,6 +24,7 @@ along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 		<function name="connectTo" />
 		<function name="saveConnection" />
 		<function name="deleteConnection" />
+		<field id="isScreenSaver" type="boolean" onChange="onIsScreenSaverChange" />
 	</interface>
 
 	<children>

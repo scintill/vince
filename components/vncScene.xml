@@ -22,6 +22,7 @@ along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 	<script type="text/brightscript" uri="vncScene.brs" />
 
 	<interface>
+		<function name="mainInit" />
 		<function name="connectTo" />
 		<function name="showErrorDialog" />
 	</interface>

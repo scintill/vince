@@ -15,16 +15,25 @@
 ' You should have received a copy of the GNU General Public License
 ' along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
-function main() as void
+function mainImpl(isScreenSaver as boolean) as void
 	screen = createObject("roSGScreen")
 	msgPort = createObject("roMessagePort")
 	screen.setMessagePort(msgPort)
-	screen.createScene("vncScene")
+	scene = screen.createScene("vncScene")
 	screen.show()
+	scene.callFunc("mainInit", {"isScreenSaver": isScreenSaver})
 
 	while true
 		msg = wait(0, msgPort)
 
 		if type(msg) = "roSGScreenEvent" and msg.isScreenClosed() return
 	end while
+end function
+
+function main() as void
+	mainImpl(false)
+end function
+
+function runScreenSaver() as void
+	mainImpl(true)
 end function

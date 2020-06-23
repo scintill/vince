@@ -30,7 +30,10 @@ function init() as void
 
 	m.nextInstanceId = 0
 	m.isZoomed = false
+end function
 
+function mainInit(s as object) as void
+	m.isScreenSaver = s.isScreenSaver
 	setState("connections")
 end function
 
@@ -54,8 +57,11 @@ function setState(state as string) as void
 		m.top.dialog = m.dialog
 	else if state = "connections" then
 		m.connPanelSet = m.top.createChild("PanelSet")
-		m.connPanelSet.createChild("vncConnectionList").id = "vncConnectionList"
+		cList = m.connPanelSet.createChild("vncConnectionList")
+		cList.id = "vncConnectionList"
+		cList.isScreenSaver = m.isScreenSaver
 	end if
+
 	m.state = state
 end function
 

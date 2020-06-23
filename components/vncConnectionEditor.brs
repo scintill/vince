@@ -47,7 +47,26 @@ function onItemSelected() as void
 end function
 
 function onPropValueChange(event as object) as void
-	m.connection.data[m.currentConnectionKey] = event.getRoSGNode().value
+	value = componentValueToModelValue(m.currentConnectionKey, event.getRoSGNode().value)
+	m.connection.data[m.currentConnectionKey] = value
+end function
+
+function modelValueToComponentValue(key as string, value as dynamic) as dynamic
+	if key = "isScreenSaver" then
+		if value then
+			value = "true"
+		else
+			value = "false"
+		end if
+	end if
+	return value
+end function
+
+function componentValueToModelValue(key as string, value as dynamic) as dynamic
+	if key = "isScreenSaver" then
+		value = (value = "true")
+	end if
+	return value
 end function
 
 function onSetConnection() as void
@@ -57,7 +76,7 @@ end function
 function createPropEditor(cnode as object) as object
 	connectionValue = m.connection.data[cnode.description]
 
-	if cnode.description = "bpp" then
+	if cnode.description = "bpp" or cnode.description = "isScreenSaver" then
 		propEditor = createObject("roSGNode", "vncEnumPropEditor")
 	else
 		propEditor = createObject("roSGNode", "vncStringPropEditor")
@@ -65,7 +84,7 @@ function createPropEditor(cnode as object) as object
 	end if
 	propEditor.title = cnode.title
 	propEditor.key = cnode.description
-	propEditor.value = connectionValue
+	propEditor.value = modelValueToComponentValue(propEditor.key, connectionValue)
 	propEditor.observeField("value", "onPropValueChange")
 	return propEditor
 end function

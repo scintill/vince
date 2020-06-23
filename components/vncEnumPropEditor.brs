@@ -48,5 +48,10 @@ function getEnumValues() as object
 			"8": "Low Color (8 bits)"
 			"24": "True Color (24 bits)"
 		}
+	else if m.top.key = "isScreenSaver" then
+		return {
+			"true": "Yes"
+			"false": "No"
+		}
 	end if
 end function
