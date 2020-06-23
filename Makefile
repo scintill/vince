@@ -15,8 +15,13 @@
 # You should have received a copy of the GNU General Public License
 # along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
+APPNAME = vince
+VERSION = 1.0
+
+ZIP_EXCLUDE_LOCAL = /.git/\* .gitignore /dist/\* /proprietary/\* /prebuild/\* /notes.txt
+
 .PHONY: .always
 manifest: .always
 	make -C prebuild
 
-include proprietary/Makefile
+include proprietary/app.mk # based on https://github.com/rokudev/samples/blob/master/getting%20started/makefile/app.mk
