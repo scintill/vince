@@ -18,7 +18,7 @@
 APPNAME = vince
 VERSION = 1.0
 
-ZIP_EXCLUDE_LOCAL = /.git/\* .gitignore /dist/\* /proprietary/\* /prebuild/\* /notes.txt
+ZIP_EXCLUDE_LOCAL = /.git/\* .gitignore /dist/\* /proprietary/\* /prebuild/\* /docs/\* /notes.txt
 
 .PHONY: .always
 manifest: .always
