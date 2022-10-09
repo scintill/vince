@@ -15,16 +15,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Vince.  If not, see <https://www.gnu.org/licenses/>.
 
+NODE ?= node # or nodes
 all: fonts bmps
 
-fonts: ../fonts/fa-regular-400.ttf ../fonts/fa-solid-900.ttf
+fonts: ../fonts ../fonts/fa-regular-400.ttf ../fonts/fa-solid-900.ttf
 bmps: ../images/8.bmph ../images/24.bmph
+
+../fonts:
+	mkdir $@
 
 ../fonts/%: %
 	pyftsubset $< --output-file=$@ --name-IDs='*' --text=""
 
 ../images/8.bmph: bmph.js
-	nodejs ./bmph.js 8 | base64 -d > $@
+	$(NODE) ./bmph.js 8 | base64 -d > $@
 
 ../images/24.bmph: bmph.js
-	nodejs ./bmph.js 24 | base64 -d > $@
+	$(NODE) ./bmph.js 24 | base64 -d > $@

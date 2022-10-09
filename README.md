@@ -18,7 +18,7 @@ The menus are hopefully intuitive. When you have a connection open, press the "O
 
 ## Building
 
-Currently the build relies on a Roku-provided Makefile with no explicit license. See the comment at the bottom of `Makefile` for the URL to that file, download it, and run `make` to build the zip, then [sideload it](https://developer.roku.com/en-ca/docs/developer-program/getting-started/developer-setup.md).
+Currently the build relies on a Roku-provided Makefile with no explicit license. See the comment at the bottom of `Makefile` for the URL to that file, download it, and run `make` to build the zip, then [sideload it](https://developer.roku.com/en-ca/docs/developer-program/getting-started/developer-setup.md). It is necessary to have [fonttools](https://github.com/fonttools/fonttools) installed
 
 ## License
 
